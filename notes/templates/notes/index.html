@@ -1,0 +1,17 @@
+{% extends "base_site.html" %}
+{% block content %}
+    {% block links %}
+        <a href="{% url 'notes:history' %}">View history</a>
+        <br>
+        <a href="{% url 'notes:new' %}">Add new</a>
+    {% endblock %}
+    {% if own_note_list %}
+        <ul>
+        {% for note in own_note_list %}
+            <li> <a href="{% url 'notes:edit' note.id %}"> {{ note.content }} </a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No notes are available.</p>
+    {% endif %}
+{% endblock %}

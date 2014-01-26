@@ -1,0 +1,10 @@
+{% extends "base_site.html" %}
+{% block content %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <form action="{% url 'notes:add'%}" method="post">
+        {% csrf_token %}
+        <input type="text" name="content" />
+        <br>
+        <input type="submit" value="Add" />
+    </form>
+{% endblock %}

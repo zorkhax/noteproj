@@ -1,0 +1,6 @@
+{% extends "notes/index.html" %}
+{% block links %}
+    {% if own_note_list %}
+        <a href="{% url 'notes:clear_history' %}">Clear</a>
+    {% endif %}
+{% endblock %}
