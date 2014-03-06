@@ -1,22 +1,24 @@
 {% extends "base_site.html" %}
+{% load i18n %}
+
 {% block content %}
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <form action="{% url 'notes:save' note.id %}" method="post">
         {% csrf_token %}
         <input type="text" name="content" value="{{ note.content }}" />
         <br>
-        <input type="submit" value="Save" />
+        <input type="submit" value={% trans "Save" %} />
     </form>
     <form action="{% url 'notes:move' note.id %}" method="post">
         {% csrf_token %}
         {% if note.in_history %}
-            <input type="submit" value="Remove from history" />
+            <input type="submit" value="{% trans "Remove from history" %}" />
         {% else %}
-            <input type="submit" value="Move to history" />
+            <input type="submit" value="{% trans "Move to history" %}" />
         {% endif %}
     </form>
     <form action="{% url 'notes:delete' note.id %}" method="post">
         {% csrf_token %}
-        <input type="submit" value="Delete" />
+        <input type="submit" value={% trans "Delete" %} />
     </form>
 {% endblock %}

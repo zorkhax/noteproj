@@ -1,6 +1,8 @@
 {% extends "notes/index.html" %}
+{% load i18n %}
+
 {% block links %}
     {% if own_note_list %}
-        <a href="{% url 'notes:clear_history' %}">Clear</a>
+        <a href="{% url 'notes:clear_history' %}">{% trans "Clear" %}</a>
     {% endif %}
 {% endblock %}

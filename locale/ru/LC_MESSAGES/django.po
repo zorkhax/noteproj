@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-04 12:31+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: notes/views.py:37
+#, fuzzy
+msgid "History"
+msgstr "История"
+
+#: notes/views.py:54
+msgid "Edit note"
+msgstr "Изменение заметки"
+
+#: notes/views.py:65
+msgid "Can't save note."
+msgstr "Не удалось сохранить заметку."
+
+#: notes/views.py:76
+msgid "New note"
+msgstr "Новая заметка"
+
+#: notes/views.py:86
+msgid "Can't add new note."
+msgstr "Не удалось добавит заметку."
+
+#: notes/views.py:89
+msgid "Nothing"
+msgstr "Пустая заметка"
+
+#: notes/templates/notes/edit.html:10
+msgid "Save"
+msgstr "Сохранить"
+
+#: notes/templates/notes/edit.html:15
+msgid "Remove from history"
+msgstr "Убрать из истории"
+
+#: notes/templates/notes/edit.html:17
+msgid "Move to history"
+msgstr "Добавить в историю"
+
+#: notes/templates/notes/edit.html:22
+msgid "Delete"
+msgstr "Удалить"
+
+#: notes/templates/notes/history.html:6
+msgid "Clear"
+msgstr "Очистить"
+
+#: notes/templates/notes/index.html:6
+msgid "View history"
+msgstr "История"
+
+#: notes/templates/notes/index.html:8
+msgid "Add new"
+msgstr "Добавить"
+
+#: notes/templates/notes/index.html:17
+msgid "No notes are available."
+msgstr "Нет доступных заметок."
+
+#: templates/base.html:28
+msgid "Welcome,"
+msgstr "Привет,"
+
+#: templates/base.html:33
+msgid "Documentation"
+msgstr "Документация"
+
+#: templates/base.html:36
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: templates/base.html:38
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/base.html:47 templates/registration/logged_out.html:4
+msgid "Home"
+msgstr "Заметки"
+
+#: templates/base_site.html:4 templates/admin/base_site.html:4
+msgid "Settings"
+msgstr "Настройки"
+
+#: templates/base_site.html:7 templates/admin/base_site.html:7
+msgid "Mysite"
+msgstr ""
+
+#: templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: templates/admin/index.html:21
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: templates/admin/index.html:33
+msgid "Add"
+msgstr "Добавить"
+
+#: templates/admin/index.html:39
+msgid "Change"
+msgstr "Изменить"
+
+#: templates/admin/index.html:49
+msgid "You don't have permission to edit anything."
+msgstr "У вас нет прав на изменения."
+
+#: templates/admin/index.html:57
+msgid "Recent Actions"
+msgstr "Последние действия"
+
+#: templates/admin/index.html:58
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/index.html:62
+msgid "None available"
+msgstr "Нес доступных"
+
+#: templates/admin/index.html:76
+msgid "Unknown content"
+msgstr ""
+
+#: templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Зпасибо за время, проведённое с сайтом."
+
+#: templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr "Войти заново"
+
+#: templates/registration/login.html:17
+msgid "Please correct the error below."
+msgstr ""
+
+#: templates/registration/login.html:17
+msgid "Please correct the errors below."
+msgstr ""
+
+#: templates/registration/login.html:37
+msgid "Password:"
+msgstr "Пароль:"
+
+#: templates/registration/login.html:44
+msgid "Forgotten your password or username?"
+msgstr "Забыли пароль или имя? Ну вы даёте =)"
+
+#: templates/registration/login.html:48
+msgid "Log in"
+msgstr "Войти"

@@ -1,10 +1,11 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from notes.models import Note
+from django.utils.translation import ugettext as _
 from django.views import generic
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from notes.models import Note
 
 
 class IndexView(generic.ListView):
@@ -33,7 +34,7 @@ class HistoryView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(HistoryView, self).get_context_data(**kwargs)
-        context['title'] = 'History'
+        context['title'] = _('History')
         return context
 
     def get_queryset(self):
@@ -50,7 +51,7 @@ def edit(request, note_id):
         note = Note.objects.get(pk=note_id, user=request.user)
     except:
         return HttpResponseRedirect(reverse('notes:index'))
-    context = {'title': 'Edit note', 'note': note}
+    context = {'title': _('Edit note'), 'note': note}
     return render(request, 'notes/edit.html', context)
 
 
@@ -61,7 +62,7 @@ def save(request, note_id):
         content = request.POST['content']
     except (KeyError):
         return render(request, 'notes/edit.html', {
-            'error_message': "Can't save note.",
+            'error_message': _("Can't save note."),
         })
     else:
         note.content = content if content else 'Nothing'
@@ -72,7 +73,7 @@ def save(request, note_id):
 
 @login_required(login_url='login')
 def new(request):
-    context = {'title': 'New note'}
+    context = {'title': _('New note')}
     return render(request, 'notes/new.html', context)
 
 
@@ -82,10 +83,10 @@ def add(request):
         content = request.POST['content']
     except (KeyError):
         return render(request, 'notes/new.html', {
-            'error_message': "Can't add new note.",
+            'error_message': _("Can't add new note."),
         })
     else:
-        content = content if content else 'Nothing'
+        content = content if content else _('Nothing')
         note = Note(content=content,
                     user=request.user,
                     edit_date=timezone.now())

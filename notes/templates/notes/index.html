@@ -1,17 +1,19 @@
 {% extends "base_site.html" %}
+{% load i18n %}
+
 {% block content %}
     {% block links %}
-        <a href="{% url 'notes:history' %}">View history</a>
+        <a href="{% url 'notes:history' %}">{% trans "View history" %}</a>
         <br>
-        <a href="{% url 'notes:new' %}">Add new</a>
+        <a href="{% url 'notes:new' %}">{% trans "Add new" %}</a>
     {% endblock %}
     {% if own_note_list %}
         <ul>
         {% for note in own_note_list %}
-            <li> <a href="{% url 'notes:edit' note.id %}"> {{ note.content }} </a></li>
+            <li> <a href="{% url 'notes:edit' note.id %}">{{ note.content }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
-        <p>No notes are available.</p>
+        <p>{% trans "No notes are available." %}</p>
     {% endif %}
 {% endblock %}
